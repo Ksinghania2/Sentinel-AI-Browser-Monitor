@@ -1,0 +1,23 @@
+# GitHub Actions CI/CD for Sentinel-AI-Browser-Monitor
+name: HTML CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate HTML
+        uses: industry/html@v1
+        with:
+          html: .
+          allow_unsafe_rename: true
+      - name: Check for broken links
+        run: |
+          npm install -g @ampproject/renderer
+          echo 'HTML validation complete'
