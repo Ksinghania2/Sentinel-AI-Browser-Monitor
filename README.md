@@ -1,37 +1,38 @@
 # Sentinel-AI-Browser-Monitor
 
-An AI-assisted browser monitoring project for observing browser activity and conditions.
+A simple project for learning about browser monitoring.
 
-## Overview
-This project provides browser monitoring capabilities using AI assistance to observe and track browser activity, conditions, and events in real-time.
+## What It Does
+This project shows how to monitor basic browser activities.
 
-## Features
-- Browser activity monitoring
-- AI-assisted condition detection
-- Real-time event tracking
-- Customizable monitoring rules
-- Integration with browser automation tools
-
-## Usage
+## Basic Example
 ```html
-<!-- Include the monitor script -->
-<script src="sentinel-monitor.js"></script>
+<!-- Simple monitor -->
+<div id="monitor">
+  Click to start monitoring
+</div>
 <script>
-  const monitor = new SentinelMonitor({
-    observe: ['tab', 'window', 'url'],
-    onEvent: (event) => { console.log(event); }
+  const btn = document.getElementById('monitor');
+  btn.addEventListener('click', () => {
+    console.log('Monitoring started');
   });
-  monitor.start();
 </script>
 ```
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## How It Works
+1. Set up basic HTML
+2. Add event listeners
+3. Log browser activities
 
-## Topics
-- ai-agent
-- automation
-- browser-automation
-- browser-monitoring
-- monitoring
-```
+## Learn More
+- Search online for "HTML browser events"
+- Try clicking different elements
+- See what gets logged
+
+## Concepts
+- HTML elements
+- JavaScript events
+- Console logging
+
+## Author
+Educational project
